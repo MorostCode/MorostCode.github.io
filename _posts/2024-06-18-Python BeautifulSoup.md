@@ -1,3 +1,10 @@
+---
+title: "BeautifulSoup"
+published: true
+date: 2024-06-18
+tags: [Python, BeautifulSoup]
+---
+
 # BeautifulSoup
 
 ## 简介
