@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+{% if page.tags %}
+  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+{% endif %}
+
+{{content}}
+
+<p class="view">by {{ page.author | default: site.author }}</p>
+<p>CreateTime {{ page.date}}</p>
+<p>UpdateTime {{ page.update}}</p>
