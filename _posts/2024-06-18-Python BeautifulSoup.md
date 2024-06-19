@@ -2,14 +2,11 @@
 title: "BeautifulSoup"
 published: true
 date: 2024-06-18
+updated: 2024-06-19
 tags: [Python, BeautifulSoup]
 ---
 
 # BeautifulSoup
-
-创建时间：2024-06-18
-
-修改时间：2024-06-19
 
 ## 简介
 
