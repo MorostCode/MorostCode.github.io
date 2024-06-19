@@ -2,7 +2,7 @@
 title: "BeautifulSoup"
 published: true
 date: 2024-06-18
-updated: 2024-06-19
+update: 2024-06-19
 tags: [Python, BeautifulSoup]
 ---
 
