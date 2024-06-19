@@ -8,7 +8,7 @@ layout: default
 
 {{content}}
 
-
+<hr>
 <p class="view">by {{ page.author | default: site.author }}</p>
-<p>CreateTime {{ page.date}}</p>
-<p>UpdateTime {{ page.update}}</p>
+<p>CreateTime {{ page.date | date: "%Y-%m-%d" }}</p>
+<p>UpdateTime {{ page.update | date: "%Y-%m-%d" }}</p>
