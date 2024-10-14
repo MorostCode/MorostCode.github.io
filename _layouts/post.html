@@ -1,14 +1,28 @@
----
-layout: default
----
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang }}">
+{% include head.html %}
 
-{% if page.tags %}
-  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
-{% endif %}
+<body id="post">
+  {% include header.html %}
+  <div id="main" role="main">
+    <article class="hentry">
+      <div class="entry-content">
+        <h1 class="post-title entry-title">{{ page.title }}</h1>
+        <h4 class="page-info">
+          <span>Categories: {{page.categories}}</span>
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+          <div class="qr-text" id="J_qr_text">
+            <div id="J_qr_code" class="qr-code" onmouseover="this.title='';"></div>
+          </div>
+        </h4>
+        {{ content | cdn_image_filter }}
+        {% include buy-me-coffee.html %}
+      </div>
+      {% include giscus.html %}
+      {% include read-more.html %}
+    </article>
+  </div>
+  {% include footer.html %}
+</body>
 
-{{content}}
-
-<hr>
-<p class="view">by {{ page.author | default: site.author }}</p>
-<p>CreateTime {{ page.date | date: "%Y-%m-%d" }}</p>
-<p>UpdateTime {{ page.update | date: "%Y-%m-%d" }}</p>
+</html>

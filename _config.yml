@@ -1,33 +1,71 @@
-# 主题
-remote_theme: pages-themes/hacker@v0.2.0
+# Site Information
+title: Tw93
+description: "Hi, I'm Tw93, a Frontend Engineer from China, also dabbling a bit in Swift, Rust, Python, and Sketch. I'm the creator of MiaoYan, Pake, Trendy Weekly, XRender, and WeexUi. Believing in long-termism, I am passionate about open source and enjoy experimenting with new ideas."
+url: https://tw93.fun
+repo: tw93/tw93.github.io
+lang: zh-CN
+timezone: Africa/El_Aaiun
 
-# 标题
-title: DocFreezer
-# 描述
-description: Special cases aren't special enough to break the rules.
+# Social Media and External URLs
+github: tw93
+zhihu: tw93
+twitter: HiTw93
+v2ex: tw93
+menu:
+  - title: "Categories"
+    url: "/categories.html"
+  - title: "About"
+    url: "/about.html"
+  - title: "Weekly"
+    url: "https://weekly.tw93.fun/"
 
-show_downloads: false
+# SEO and Analytics
+google_analytics: G-KS7EDB6BRM
 
-author:
-    name: "morost"
-    email: "outmyown@gmail.com"
+# Build Settings
+paginate: 10
+post_ext: md
+page_ext: md
+post_layout: post
+page_layout: page
+titlecase: true
+future: true
+highlighter: rouge
+markdown: kramdown
+permalink: /:year-:month-:day/:title.html
+sass:
+  sass_dir: _sass
+  style: compressed
 
-baseurl: /
+collections:
+  posts:
+    output: true
+    permalink: /:year-:month-:day/:title.html
+  posts_en:
+    output: true
+    permalink: /en/:year-:month-:day/:title.html
+    sort_by: date
 
-source: .
-destination: ./_site
-permalink: /:title
-paginate: 3
-paginate_path: /page/:num/
+include: [".htaccess"]
+exclude:
+  [
+    "Gemfile",
+    "Gemfile.lock",
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "node_modules",
+  ]
 
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-pdf-embed
+  - jekyll-sitemap
+  - jekyll-feed
 
-# Custom variables
-owner : "morost"
-year : "2024"
+# Custom Site Settings
+showBuyCoffee: true
+payImage: //gw.alipayobjects.com/zos/k/vb/1.png
+assetUrl: //tw93.fun/images/
+defaultImage: data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
